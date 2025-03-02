@@ -1,0 +1,36 @@
+
+.logcont{
+    display: flex;
+    flex-direction: column;
+    border:1px solid black;
+    justify-content: center;
+    
+}
+
+
+
+
+.logincontainer{
+    width:25vw;
+    height:55vh;
+    border:1px solid black ;
+    border-radius:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+    background-color: rgb(141, 104, 177);   
+}
+
+.logincontainer h1{
+    width:100%;
+    text-align:center
+}
+
+.btn{
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+

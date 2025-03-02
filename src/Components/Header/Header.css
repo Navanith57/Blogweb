@@ -1,0 +1,26 @@
+.hm {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+.topbar-right {
+    display: flex;
+    justify-content: end;
+}
+
+.headertitles {
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    flex: 3;
+}
+
+.topimage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}

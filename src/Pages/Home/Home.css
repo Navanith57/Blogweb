@@ -1,0 +1,170 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.hm {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.content {
+    flex-grow: 1;  
+    padding: 20px;
+}
+
+.topbar-right {
+    display: flex;
+    justify-content: end;
+}
+
+.headertitles {
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    flex: 3;
+}
+
+.topimage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.fter {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.addbtn {
+    display: flex;          
+    justify-content: flex-end; 
+    align-items: center;    
+    height: 100px; 
+}
+
+.btn {
+    font-size: 15px;
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.post{
+    border: 1px solid black;
+    width:25vw;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 2px 5px #888888;
+}
+
+.msgcontainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.title{
+    display: flex;
+   
+}
+
+.titlebar{
+    font-size: 15px;
+    font-weight: bold;
+    flex:3;
+    
+}
+.deleteicon{
+    cursor: pointer;
+    margin-right:2px;
+}
+
+.deleteicon:hover{
+    color: red;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    max-height: 80vh; 
+    overflow-y: auto; 
+}
+
+
+.popup-content input, .popup-content textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-content button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.post-button{
+    background-color: blue;
+    color: white;
+    margin-right: 100px;
+}
+
+.popup-content button:last-child {
+    background-color: red;
+
+    color: white;
+}
+
+.readmore{
+    cursor: pointer;
+    color:blue;
+  
+}
+.readmore:hover{
+    color:rgb(83, 15, 172);
+
+}
+
+.time{
+    margin-top: 10px;
+}
+
+.editicon{
+    cursor: pointer;
+}
+.editicon:hover{
+    color: rgb(33, 67, 218);
+}
+
