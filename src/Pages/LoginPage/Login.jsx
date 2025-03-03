@@ -5,7 +5,8 @@ import './Login.css';
 const Login = () => {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
-  const [check, setCheck] = useState(null); 
+  const [check, setCheck] = useState(null);
+  const [signup,setSignup]=useState(false); 
   const navigate = useNavigate();
 
   const Checking = () => {
@@ -23,6 +24,12 @@ const Login = () => {
       navigate('/home');
     }
   }, [check, navigate]);
+
+  useEffect(()=>{
+    if(signup){
+      navigate('/signup');
+    }
+  },[signup,navigate])
 
   return (
     <div className="logcont">
@@ -50,6 +57,11 @@ const Login = () => {
         <button className="btn" onClick={Checking}>
           Login
         </button> 
+
+        <button className='signupbtn' onClick={()=>{setSignup(true)}}>
+          Signup
+        </button>
+        
         
         {check === false && <p>Invalid User</p>}
       </div>
