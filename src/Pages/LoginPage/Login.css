@@ -7,12 +7,9 @@
     
 }
 
-
-
-
 .logincontainer{
     width:25vw;
-    height:55vh;
+    height:fit-content;
     border:1px solid black ;
     border-radius:10px;
     display: flex;
@@ -34,3 +31,19 @@
     border-radius: 4px;
 }
 
+.signupbtn{
+    margin-top: 5px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+    
+.signupbtn {
+    font-size: 15px;
+    padding: 10px 15px;
+    background-color: rgb(12, 201, 154);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

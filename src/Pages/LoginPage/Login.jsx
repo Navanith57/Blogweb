@@ -9,7 +9,9 @@ const Login = () => {
   const navigate = useNavigate();
 
   const Checking = () => {
-    if (user === 'Nava' && password === 'hello@12') {
+    const storedUser = JSON.parse(localStorage.getItem('user')); 
+
+    if (storedUser && user === storedUser.username && password === storedUser.password) {
       setCheck(true);
     } else {
       setCheck(false);
@@ -28,7 +30,7 @@ const Login = () => {
         <h1>Login</h1>
 
         <label>
-          <h3>Enter UserName</h3>
+          <h3>Enter Username</h3>
           <input
             type="text"
             value={user}
