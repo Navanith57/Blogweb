@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {getUser} from '../../utils/indexedDB';
 import './Login.css';
 
 const Login = () => {
@@ -9,10 +10,9 @@ const Login = () => {
   const [signup,setSignup]=useState(false); 
   const navigate = useNavigate();
 
-  const Checking = () => {
-    const storedUser = JSON.parse(localStorage.getItem('user')); 
-
-    if (storedUser && user === storedUser.username && password === storedUser.password) {
+  const Checking = async () => {
+    const storedUser = await getUser(user);
+    if (storedUser && password === storedUser.password) {
       setCheck(true);
     } else {
       setCheck(false);
@@ -58,6 +58,7 @@ const Login = () => {
           Login
         </button> 
 
+        <p className='sig'>Don't have a Account ? Click Signup</p>
         <button className='signupbtn' onClick={()=>{setSignup(true)}}>
           Signup
         </button>

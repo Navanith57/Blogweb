@@ -31,12 +31,19 @@
     border-radius: 4px;
 }
 
+.btn:hover{
+    background-color: rgb(39, 39, 122);
+}
+
 .signupbtn{
-    margin-top: 5px;
+    margin-top: 2px;
     font-size: 18px;
     border-radius: 4px;
 }
 
+.sig{
+    color:rgb(59, 10, 10);
+}
     
 .signupbtn {
     font-size: 15px;
@@ -46,4 +53,8 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.signupbtn:hover{
+    background-color: rgb(30, 104, 85);
 }

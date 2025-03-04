@@ -64,15 +64,19 @@
 
 .post{
     border: 1px solid black;
-    width:25vw;
-    height: fit-content;
+    width: 400px;;
+    min-height: 400px;
+    object-fit: contain;
     border-radius: 10px;
     box-shadow: 2px 5px #888888;
+    margin-bottom: 25px;
 }
 
 .msgcontainer{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    flex-grow: 1;
 }
 
 .title{
@@ -168,3 +172,11 @@
     color: rgb(33, 67, 218);
 }
 
+.post-image {
+    width: 100%;
+    min-height: 400px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  

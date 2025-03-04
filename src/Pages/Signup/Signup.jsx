@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate,Link } from 'react-router-dom';
+import {addUser,getUser} from '../../utils/indexedDB'
 import './Signup.css';
 
 const Signup = () => {
@@ -9,7 +10,7 @@ const Signup = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleSignup = () => {
+  const handleSignup =async () => {
     if (!username || !password || !confirmPassword) {
       setError('All fields are required.');
       return;
@@ -20,9 +21,13 @@ const Signup = () => {
       return;
     }
 
-    localStorage.setItem('user', JSON.stringify({ username, password }));
-
+    const existingUser=await getUser(username);
+    if(existingUser){
+        setError("Username already exists")
+        return;
+    }
    
+    await addUser(username,password)
     navigate('/');
   };
 
